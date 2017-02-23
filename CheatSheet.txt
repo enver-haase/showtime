@@ -1,0 +1,20 @@
+Cheat Sheet:
+
+"cd" into the demo project folder and then:
+mvn jetty:run
+ in the browser:
+http://localhost:8080/projectname
+ or
+http://localhost:8080/projectname/?debug
+
+The "?debug" works only when the Vaadin application was compiled in
+debug mode, and it shows a window which allows you to measure performance
+and to identify web elements (such as buttons, ...) so that you can
+use those selectors for Vaadin TestBench 4.
+To achieve the latter, press the tab with the checklist-clipboard icon,
+and then in the sub-tab the for-arrow picker icon left of the trashcan
+icon. Then select any element. You will get a description such as
+"TextFieldElement firstNameTextField = $(TextFieldElement.class).caption("First Name").first();".
+This text you can select with the mouse and then use the known keyboard
+shortcuts to copy-and-paste those into your TestBench 4 code.
+
