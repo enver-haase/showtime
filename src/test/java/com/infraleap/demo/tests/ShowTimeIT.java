@@ -1,8 +1,6 @@
 package com.infraleap.demo.tests;
 
 import java.io.File;
-import java.util.Enumeration;
-import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
@@ -66,14 +64,6 @@ public class ShowTimeIT extends TestBenchTestCase {
 		Parameters.setScreenshotComparisonCursorDetection(true);
 
 		setDriverAndSize(Constants.WEBDRIVER, Constants.TESTBENCH_WIDTH, Constants.TESTBENCH_HEIGHT);
-
-		Properties props = System.getProperties();
-		Enumeration<?> e = props.propertyNames();
-
-		while (e.hasMoreElements()) {
-			String key = (String) e.nextElement();
-			LOGGER.info(key + " -- " + props.getProperty(key));
-		}
 
 		String httpPort = System.getProperty(Constants.PROP_SYS_HTTP_PORT);
 		if (httpPort == null){
