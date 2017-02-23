@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;showtimetheme&quot;}">
+  <meta name="vaadin-version" content="8.0.0.beta2">
+ </head>
+ <body>
+  <vaadin-vertical-layout size-full value="Address">
+   <vaadin-label width-full plain-text>
+     Address 
+   </vaadin-label>
+   <vaadin-horizontal-layout width-full>
+    <vaadin-text-field caption="First Name" width-full _id="firstNameField" :expand></vaadin-text-field>
+    <vaadin-text-field caption="Last Name" width-full :expand></vaadin-text-field>
+   </vaadin-horizontal-layout>
+   <vaadin-text-field caption="Street" width-full></vaadin-text-field>
+   <vaadin-horizontal-layout width-full>
+    <vaadin-text-field caption="Post Code" width-full height="37px" :expand="0.3"></vaadin-text-field>
+    <vaadin-text-field caption="City" width-full :expand></vaadin-text-field>
+   </vaadin-horizontal-layout>
+   <vaadin-text-field caption="Country" width-full></vaadin-text-field>
+  </vaadin-vertical-layout>
+ </body>
+</html>
