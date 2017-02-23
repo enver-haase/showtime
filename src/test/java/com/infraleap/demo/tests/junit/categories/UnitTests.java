@@ -1,4 +1,4 @@
-package com.infraleap.demo.tests.junit;
+package com.infraleap.demo.tests.junit.categories;
 
 /**
  * Empty marker interface to categorize JUnit tests to be unit tests, i.e. tests that

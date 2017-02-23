@@ -4,7 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.experimental.categories.Category;
 
-import com.infraleap.demo.tests.junit.UnitTests;
+import com.infraleap.demo.tests.junit.categories.UnitTests;
 
 @Category(UnitTests.class)
 /**

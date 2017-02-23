@@ -19,4 +19,9 @@ public class Util {
 		final StackTraceElement[] ste = Thread.currentThread().getStackTrace();
 		return ste[3].getClassName()+":"+ste[3].getMethodName();
 	}
+	
+	public static String identityToString(Object obj){
+		String idStr = obj.getClass().getName() + '@' + Integer.toHexString(System.identityHashCode(obj));
+		return idStr;
+	}
 }

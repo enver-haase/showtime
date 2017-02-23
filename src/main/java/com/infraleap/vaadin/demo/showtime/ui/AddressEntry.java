@@ -12,8 +12,8 @@ public class AddressEntry extends AddressEntryDesign {
 	private static final long serialVersionUID = 1L;
 
 	/* In case you did not know: code like this is appended to every constructor there is,
-	 * and if there is no constructor then there is always an implicit public no-arguments default
-	 * constructor as you know.
+	 * and if it seems like there is no constructor then there is always an implicit public
+	 * no-arguments default constructor as you should know.
 	 */
 	{
 		firstNameField.addBlurListener(new BlurListener() {
