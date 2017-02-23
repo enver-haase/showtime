@@ -3,6 +3,7 @@ package com.infraleap.vaadin.demo.showtime;
 import javax.servlet.annotation.WebServlet;
 
 import com.infraleap.vaadin.demo.showtime.ui.AddressEntry;
+import com.infraleap.vaadin.demo.util.Util;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.VaadinRequest;
@@ -30,6 +31,8 @@ public class ShowTimeMainUI extends UI {
 
 	@Override
     protected void init(VaadinRequest vaadinRequest) {
+		Util.logEnter();
+		
         final VerticalLayout layout = new VerticalLayout();
         
         final AddressEntry addressEntry = new AddressEntry();
@@ -46,6 +49,8 @@ public class ShowTimeMainUI extends UI {
         layout.addComponents(addressEntry, coolButton);
         
         setContent(layout);
+        
+        Util.logExit();
     }
 
     @WebServlet(urlPatterns = "/*", name = "ShowTimeMainUIServlet", asyncSupported = true)

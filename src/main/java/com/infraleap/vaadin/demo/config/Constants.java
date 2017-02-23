@@ -15,5 +15,6 @@ public interface Constants {
 
 	public static final long TEST_TIMEOUT_SECS = 240;
 	
+	public static final String PROP_DATABASE_BACKEND = "database.backend";
 	public static final String PROP_WEBDRIVER_LOCATION = "webdriver.location";
 }

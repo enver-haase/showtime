@@ -23,6 +23,7 @@
 		<!-- If there are no local customisations, this can also be "fetch" or 
 			"cdn" -->
 		<vaadin.widgetset.mode>local</vaadin.widgetset.mode>
+		<testScope>false</testScope>
 	</properties>
 
 	<repositories>
@@ -139,6 +140,8 @@
 				<version>${jetty.plugin.version}</version>
 				<configuration>
 					<scanIntervalSeconds>2</scanIntervalSeconds>
+					<jvmArgs>${additional-props}</jvmArgs>
+					<useTestScope>${testScope}</useTestScope>
 				</configuration>
 			</plugin>
 
@@ -199,6 +202,15 @@
 				</pluginRepository>
 			</pluginRepositories>
 		</profile>
+
+		<profile>
+			<id>ci-tests</id>
+			<properties>
+				<additional-props>-Ddatabase.backend=com.infraleap.demo.tests.database.TestDB</additional-props>
+				<testScope>true</testScope>
+			</properties>
+		</profile>
+
 	</profiles>
 
 </project>

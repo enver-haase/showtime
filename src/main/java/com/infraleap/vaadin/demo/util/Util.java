@@ -1,4 +1,4 @@
-package com.infraleap.demo.tests;
+package com.infraleap.vaadin.demo.util;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -23,5 +23,9 @@ public class Util {
 	public static String identityToString(Object obj){
 		String idStr = obj.getClass().getName() + '@' + Integer.toHexString(System.identityHashCode(obj));
 		return idStr;
+	}
+
+	public static void logInfo(String message) {
+		LOGGER.log(Level.INFO, message);
 	}
 }

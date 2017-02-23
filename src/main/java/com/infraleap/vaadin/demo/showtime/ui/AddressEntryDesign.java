@@ -19,6 +19,7 @@ import com.vaadin.ui.declarative.Design;
 @SuppressWarnings("serial")
 public class AddressEntryDesign extends VerticalLayout {
 	protected TextField firstNameField;
+	protected TextField lastNameTextField;
 
 	public AddressEntryDesign() {
 		Design.read(this);

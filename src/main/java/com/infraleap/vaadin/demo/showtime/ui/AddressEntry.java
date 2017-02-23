@@ -1,5 +1,6 @@
 package com.infraleap.vaadin.demo.showtime.ui;
 
+import com.infraleap.vaadin.demo.database.DatabaseBackEndProvider;
 import com.vaadin.event.FieldEvents.BlurEvent;
 import com.vaadin.event.FieldEvents.BlurListener;
 import com.vaadin.ui.Notification;
@@ -26,5 +27,7 @@ public class AddressEntry extends AddressEntryDesign {
 				}
 			};
 		});
+		
+		lastNameTextField.setValue(DatabaseBackEndProvider.getDatabaseBackend().getLastUsedFamilyName());
 	}
 }

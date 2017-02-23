@@ -7,7 +7,9 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.experimental.categories.Category;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
@@ -15,6 +17,7 @@ import org.openqa.selenium.WebDriver;
 import com.infraleap.demo.tests.integration.DriverSetter;
 import com.infraleap.demo.tests.junit.categories.IntegrationTests;
 import com.infraleap.vaadin.demo.config.Constants;
+import com.infraleap.vaadin.demo.util.Util;
 import com.vaadin.testbench.Parameters;
 import com.vaadin.testbench.TestBenchTestCase;
 
@@ -28,6 +31,14 @@ public class ShowTimeIT extends TestBenchTestCase {
 
 	final String baseUrl;
 
+	@BeforeClass
+	public static void staticSetUp(){
+	}
+	
+	@AfterClass
+	public static void staticTearDown(){
+	}
+	
 	@Before
 	public void setUp(){
 		openTestUrl();
