@@ -56,5 +56,8 @@ with
 (which also runs them once). Without the -DskipITs you would also run the
 more time-consuming Integration Tests, so
  mvn clean install
-is probablly the line you want to supply to your CI server.
-  
+is probably the line you want to supply to your CI server. Even better,
+if you want the mock database environment for the testing, the line
+ mvn -Pci-tests clean install
+is what you want to set the "ci-tests" profile as defined in the pom.xml
+file.
