@@ -1,0 +1,4 @@
+TODO:
+=====
+* Add image verification example integration tests (TestBench 5 feature).
+* Take image snapshots automatically for failing integration tests.
