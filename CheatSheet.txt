@@ -44,7 +44,17 @@ fails. This is intended.
 
 While it is true that Integration Tests may be slow, it can be expected
 from every developer to at least run the Unit Tests using
- mvn surefire:tests
+ mvn surefire:test (when they are still installed)
 plus any additional Integration Tests (e.g. via the Eclipse IDE) that
 are relevant to the code changes and additions to be checked in -- BEFORE
 THE CHECK-IN.
+Hint: when
+ mvn surefire:test
+does not find any Unit Tests, then they are not installed. Install them
+with
+ mvn clean install -DskipITs
+(which also runs them once). Without the -DskipITs you would also run the
+more time-consuming Integration Tests, so
+ mvn clean install
+is probablly the line you want to supply to your CI server.
+  
