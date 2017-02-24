@@ -41,3 +41,10 @@ However. If you have a failing Unit Test (maybe add a failing one to
 BeanTests.java - the source code provides an @Ignore'd example of a
 failing test, just remove the @Ignore) you will notice that the build
 fails. This is intended.
+
+While it is true that Integration Tests may be slow, it can be expected
+from every developer to at least run the Unit Tests using
+ mvn surefire:tests
+plus any additional Integration Tests (e.g. via the Eclipse IDE) that
+are relevant to the code changes and additions to be checked in -- BEFORE
+THE CHECK-IN.
