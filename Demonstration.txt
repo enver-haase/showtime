@@ -1,0 +1,18 @@
+Demonstration
+=============
+A live demonstration of this application can go as follows:
+
+- show how to git clone the repository from GutHub
+- show the AddressEntryDesign in Vaadin Designer 2
+- show how to name elements, how to assign IDs within the graphical editor
+- run up the application in Eclipse, using Vaadin plugin's "Run On Server..."
+- show the Maven variant: Run Configurations -- mention important Maven goals in CheatSheet.txt
+- add the "/foo?debug" to the URL, show debug window
+- show TestBench selectors generated in debug window
+- show Chrome's Developer Tools
+- run JUnit unit tests, run JUnit (TestBench) integration tests
+- show how to write TestBench integration tests
+- show how to fall back to Selenium if needs be
+- show how setting an ID of a web element helps tremendously
+- show an image verification test, how to deal with that (generating reference images from error images)
+- show how nicely a tool like JRebel hot-swaps JVM code while demonstrating without restarting Jetty
