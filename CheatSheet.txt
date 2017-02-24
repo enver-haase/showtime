@@ -38,6 +38,6 @@ failing Integration Tests do not fail the build.
 
 
 However. If you have a failing Unit Test (maybe add a failing one to
-BeanTests.java - the source code provides an @Ignored example of a
+BeanTests.java - the source code provides an @Ignore'd example of a
 failing test, just remove the @Ignore) you will notice that the build
 fails. This is intended.
