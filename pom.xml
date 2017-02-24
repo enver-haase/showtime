@@ -14,7 +14,7 @@
 	</prerequisites>
 
 	<properties>
-    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<vaadin.version>8.0.0</vaadin.version>
 		<vaadin.plugin.version>8.0.0</vaadin.plugin.version>
 		<jetty.plugin.version>9.3.9.v20160517</jetty.plugin.version>
@@ -144,7 +144,29 @@
 					<scanIntervalSeconds>2</scanIntervalSeconds>
 					<jvmArgs>${additional-props}</jvmArgs>
 					<useTestScope>${testScope}</useTestScope>
+					<stopKey>STOP</stopKey>
+					<stopPort>9999</stopPort>
 				</configuration>
+				<executions>
+					<execution>
+						<id>start-jetty</id>
+						<phase>pre-integration-test</phase>
+						<goals>
+							<goal>run-forked</goal>
+						</goals>
+						<configuration>
+							<scanIntervalSeconds>0</scanIntervalSeconds>
+							<waitForChild>false</waitForChild>
+						</configuration>
+					</execution>
+					<execution>
+						<id>stop-jetty</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>stop</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 
 			<plugin>
