@@ -32,3 +32,12 @@ contents.
 Compare this to
  mvn verify
 where tests that expect the mock database to be connected will fail.
+
+Please also notice that the above DOES NOT FAIL THE BUILD;
+failing Integration Tests do not fail the build.
+
+
+However. If you have a failing Unit Test (maybe add a failing one to
+BeanTests.java - the source code provides an @Ignored example of a
+failing test, just remove the @Ignore) you will notice that the build
+fails. This is intended.
