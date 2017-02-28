@@ -2,7 +2,7 @@ Demonstration
 =============
 A live demonstration of this application can go as follows:
 
-- show how to git clone the repository from GutHub
+- show how to git clone the repository from GitHub
 - show the AddressEntryDesign in Vaadin Designer 2
 - show how to name elements, how to assign IDs within the graphical editor
 - run up the application in Eclipse, using Vaadin plugin's "Run On Server..."
