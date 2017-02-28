@@ -4,4 +4,5 @@ import com.vaadin.testbench.TestBenchTestCase;
 
 public interface DriverSetter {
 	void setDriver(TestBenchTestCase tbTestCase);
+	String getScreenShotSuffix();
 }

@@ -30,6 +30,16 @@ public class ChromeDriverSetter implements DriverSetter {
 		tbTestCase.setDriver(webDriver);
 	}
 	
+	@Override
+	public String getScreenShotSuffix(){
+	    if (isWindows()){
+	        return "_xp_chrome_40.png";
+	    }
+	    else{
+	        return ".png"; // TODO
+	    }
+	}
+	
 	private static boolean isWindows(){
 		return System.getProperty("os.name").toLowerCase().contains("windows");
 	}
