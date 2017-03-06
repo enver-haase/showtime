@@ -3,13 +3,16 @@
  <head>
   <meta charset="UTF-8">
   <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;showtimetheme&quot;}">
-  <meta name="vaadin-version" content="8.0.0.beta2">
+  <meta name="vaadin-version" content="8.0.0">
  </head>
  <body>
   <vaadin-vertical-layout size-full value="Address">
-   <vaadin-label width-full plain-text>
-     Address 
-   </vaadin-label>
+   <vaadin-image source="theme://img/logo500.png" width="284px" height="68px" :center></vaadin-image>
+   <vaadin-horizontal-layout>
+    <vaadin-label width-full plain-text>
+      Address 
+    </vaadin-label>
+   </vaadin-horizontal-layout>
    <vaadin-horizontal-layout width-full>
     <vaadin-text-field caption="First Name" width-full _id="firstNameField" :expand></vaadin-text-field>
     <vaadin-text-field caption="Last Name" width-full _id="lastNameTextField" :expand></vaadin-text-field>
@@ -20,6 +23,7 @@
     <vaadin-text-field caption="City" width-full :expand></vaadin-text-field>
    </vaadin-horizontal-layout>
    <vaadin-text-field caption="Country" width-full></vaadin-text-field>
+   <vaadin-horizontal-layout></vaadin-horizontal-layout>
   </vaadin-vertical-layout>
  </body>
 </html>
