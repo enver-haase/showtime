@@ -214,6 +214,12 @@
 						<artifactId>surefire-junit47</artifactId>
 						<version>2.16</version>
 					</dependency>
+					<!-- https://mvnrepository.com/artifact/com.codeborne/phantomjsdriver -->
+					<dependency>
+						<groupId>com.codeborne</groupId>
+						<artifactId>phantomjsdriver</artifactId>
+						<version>1.2.1</version>
+					</dependency>
 				</dependencies>
 				<configuration>
 					<groups>com.infraleap.demo.tests.junit.categories.IntegrationTests</groups>

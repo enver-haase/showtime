@@ -10,7 +10,7 @@ import com.infraleap.vaadin.demo.config.Constants;
 import com.vaadin.testbench.TestBench;
 import com.vaadin.testbench.TestBenchTestCase;
 
-public class ChromeDriverSetter implements DriverSetter {
+public class ChromeDriverSetter extends DriverSetter {
 	
 	@Override
 	public void setDriver(TestBenchTestCase tbTestCase){
@@ -38,9 +38,5 @@ public class ChromeDriverSetter implements DriverSetter {
 	    else{
 	        return ".png"; // TODO
 	    }
-	}
-	
-	private static boolean isWindows(){
-		return System.getProperty("os.name").toLowerCase().contains("windows");
 	}
 }

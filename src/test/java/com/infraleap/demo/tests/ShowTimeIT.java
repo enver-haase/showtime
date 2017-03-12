@@ -115,7 +115,7 @@ public class ShowTimeIT extends TestBenchTestCase {
         }
         driverSetter.setDriver(this);
         getDriver().manage().window().setSize(new Dimension(
-                Constants.TESTBENCH_WIDTH, Constants.TESTBENCH_HEIGHT));
+                TestConstants.TESTBENCH_WIDTH, TestConstants.TESTBENCH_HEIGHT));
 
         String httpPort = System.getProperty(Constants.PROP_SYS_HTTP_PORT);
         if (httpPort == null) {
@@ -127,7 +127,7 @@ public class ShowTimeIT extends TestBenchTestCase {
                 + "@localhost:" + httpPort;
 
         getDriver().manage().timeouts()
-                .implicitlyWait(Constants.TEST_TIMEOUT_SECS, TimeUnit.SECONDS);
+                .implicitlyWait(TestConstants.TEST_TIMEOUT_SECS, TimeUnit.SECONDS);
     }
 
     protected void doScreenCaptureTest(String captureName) {
