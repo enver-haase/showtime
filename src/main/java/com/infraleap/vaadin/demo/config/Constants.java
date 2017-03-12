@@ -8,13 +8,12 @@ public interface Constants {
 
 	public static final String PROP_SYS_HTTP_PORT = "httpPort";
 	public static final String DEFAULT_HTTP_PORT = "8080";
-	
-	public static final String WEBDRIVER = "Chrome";
+
 	public static final int TESTBENCH_WIDTH = 1024;
 	public static final int TESTBENCH_HEIGHT = 768;
 
 	public static final long TEST_TIMEOUT_SECS = 240;
 	
-	public static final String PROP_DATABASE_BACKEND = "database.backend";
-	public static final String PROP_WEBDRIVER_LOCATION = "webdriver.location";
+	public static final String PROP_SYS_DATABASE_BACKEND = "database.backend";
+	public static final String PROP_SYS_WEBDRIVER_LOCATION = "webdriver.location";
 }

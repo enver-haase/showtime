@@ -10,7 +10,7 @@ public class DatabaseBackEndProvider {
 		
 		final DatabaseBackEnd backend;
 		
-		String backendType = System.getProperty(Constants.PROP_DATABASE_BACKEND, getClass().getPackage().getName()+".ProductionDatabaseBackEnd");
+		String backendType = System.getProperty(Constants.PROP_SYS_DATABASE_BACKEND, getClass().getPackage().getName()+".ProductionDatabaseBackEnd");
 
 		try {
 			backend = (DatabaseBackEnd) Class.forName(backendType).newInstance();

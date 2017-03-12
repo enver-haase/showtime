@@ -1,6 +1,11 @@
 package com.infraleap.demo.tests;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
@@ -82,8 +87,25 @@ public class ShowTimeIT extends TestBenchTestCase {
         Parameters.setScreenshotRetryDelay(2500);
         Parameters.setScreenshotComparisonCursorDetection(true);
         
+        Properties prop = new Properties();
+        File f = new File(TestConstants.TEST_PROPS_FILENAME);
+    	try {
+    		InputStream input = new FileInputStream(f);
+    		prop.load(input);
+    		LOGGER.info("Properties file '"+f.getAbsolutePath()+"' loaded okay.");
+			Set<Object> keys = prop.keySet();
+			for (Object key : keys.toArray()){
+				LOGGER.info("Properties file '"+f.getAbsolutePath()+"', found key '" + key.toString() + "'.");
+			}
+    	}
+    	catch (IOException | NullPointerException exc) {
+			LOGGER.warning("Could not load properties file '"+f.getAbsolutePath()+"'.");
+		}
+    	
+    	String webdriverName = prop.getProperty(TestConstants.PROP_SYS_WEBDRIVER, TestConstants.DEFAULT_WEBDRIVER);
+    	
         String classname = this.getClass().getPackage().getName() + "."
-                + Constants.WEBDRIVER + "DriverSetter";
+                + webdriverName + "DriverSetter";
         try {
             driverSetter = (DriverSetter) Class.forName(classname).newInstance();
         } catch (InstantiationException | IllegalAccessException

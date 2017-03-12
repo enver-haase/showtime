@@ -18,7 +18,7 @@ public class ChromeDriverSetter implements DriverSetter {
 		options.addArguments("--disable-extensions");
 		
 		String defaultLocation = System.getProperty("user.home")+File.separator+"Downloads"+File.separator+"chromedriver"+(isWindows()?".exe":"");
-		String webDriverLoc = System.getProperty(Constants.PROP_WEBDRIVER_LOCATION, defaultLocation);
+		String webDriverLoc = System.getProperty(Constants.PROP_SYS_WEBDRIVER_LOCATION, defaultLocation);
 		
 		File f = new File(webDriverLoc);
 		if (!f.exists()){
