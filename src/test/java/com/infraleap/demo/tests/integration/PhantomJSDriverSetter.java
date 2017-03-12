@@ -15,7 +15,7 @@ public class PhantomJSDriverSetter extends DriverSetter {
 	@Override
 	public void setDriver(TestBenchTestCase tbTestCase){
 		
-		String defaultLocation = System.getProperty("user.home")+File.separator+"Downloads"+File.separator+getOsDependendDir()+File.separator+"bin"+File.separator+"phantomjs"+(isWindows()?".exe":""); // TODO: different OS
+		String defaultLocation = System.getProperty("user.home")+File.separator+"Downloads"+File.separator+getOsDependentDir()+File.separator+"bin"+File.separator+"phantomjs"+(isWindows()?".exe":""); // TODO: different OS
 		String webDriverLoc = System.getProperty(Constants.PROP_SYS_WEBDRIVER_LOCATION, defaultLocation);
 
 		File f = new File(webDriverLoc);
@@ -29,7 +29,7 @@ public class PhantomJSDriverSetter extends DriverSetter {
 		tbTestCase.setDriver(webDriver);
 	}
 
-	private String getOsDependendDir(){
+	private String getOsDependentDir(){
 		String os = System.getProperty("os.name");
 		if (os.toLowerCase().contains("linux")){
 			return "phantomjs-2.1.1-linux-x86_64";
