@@ -31,8 +31,14 @@ public class PhantomJSDriverSetter extends DriverSetter {
 
 	private String getOsDependentDir(){
 		String os = System.getProperty("os.name").toLowerCase();
+		String arch = System.getProperty("os.arch").toLowerCase();
 		if (os.contains("linux")){
-			return "phantomjs-2.1.1-linux-x86_64";
+			if (arch.contains("i386")){
+				return "phantomjs-2.1.1-linux-i686";
+			}
+			else{
+				return "phantomjs-2.1.1-linux-x86_64";
+			}
 		}
 		else if (os.contains("windows")){
 			return "phantomjs-2.1.1-windows";
