@@ -1,7 +1,7 @@
 package com.infraleap.vaadin.demo.config;
 
 public interface Constants {
-	public static final int HTTP_PORT = 8080;
+	public static final int HTTP_PORT = 8088;
 
 	public static final String USERNAME = "enver";
 	public static final String PASSWORD = "ilovesteffi";

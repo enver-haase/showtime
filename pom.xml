@@ -27,8 +27,9 @@
 		<vaadin.widgetset.mode>local</vaadin.widgetset.mode>
 		<testScope>false</testScope>
 		<jetty.ssl>443</jetty.ssl>
-		<jetty.nossl>8080</jetty.nossl>
+		<jetty.nossl>8088</jetty.nossl>
 		<jetty.env>src/test/resources/jetty-env-prod.xml</jetty.env>
+		<vmargs>-Djetty.http.port=${jetty.nossl}</vmargs>
 		<!-- <testbench.license.prop>-Dvaadin.testbench.developer.license=feedbabe-1337-1337-1337-feeddeadbeef</testbench.license.prop> -->
 	</properties>
 
@@ -144,7 +145,7 @@
 				<version>${jetty.plugin.version}</version>
 				<configuration>
 					<scanIntervalSeconds>2</scanIntervalSeconds>
-					<jvmArgs>${additional-props}</jvmArgs>
+					<jvmArgs>${additional-props} ${vmargs}</jvmArgs>
 					<useTestScope>${testScope}</useTestScope>
 					<jettyConfig>${jetty.env}</jettyConfig>
 					<stopKey>STOP</stopKey>
