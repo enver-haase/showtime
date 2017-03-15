@@ -150,6 +150,9 @@
 					<jettyConfig>${jetty.env}</jettyConfig>
 					<stopKey>STOP</stopKey>
 					<stopPort>9999</stopPort>
+					<httpConnector>
+						<port>${jetty.nossl}</port>
+					</httpConnector>
 				</configuration>
 				<executions>
 					<execution>
