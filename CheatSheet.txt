@@ -21,7 +21,7 @@ shortcuts to copy-and-paste those into your TestBench 4 code.
 
 
 When running
- mvn -Pci-tests verify
+ mvn -Pci-tests clean verify
 then the test cases including the test database are deployed as well,
 plus the "database.backend" Java system property is set to the class name
 of a simple mock database.
@@ -30,7 +30,7 @@ Jetty should be started as shown above, as the tests expect the mock database
 contents.
 
 Compare this to
- mvn verify
+ mvn clean verify
 where tests that expect the mock database to be connected will fail.
 
 Please also notice that the above DOES NOT FAIL THE BUILD;
