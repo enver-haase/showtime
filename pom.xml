@@ -29,7 +29,7 @@
 		<jetty.ssl>443</jetty.ssl>
 		<jetty.nossl>8088</jetty.nossl>
 		<additional-props>-Ddatabase.backend=com.infraleap.vaadin.demo.database.ProductionDatabaseBackEnd</additional-props>
-		<jetty.env>src/main/resources/jetty/jetty-env-prod.xml</jetty.env>
+		<!-- jetty.env>src/main/resources/jetty/jetty-env-prod.xml</jetty.env -->
 		<vmargs>-Djetty.http.port=${jetty.nossl}</vmargs>
 		<!-- <testbench.license.prop>-Dvaadin.testbench.developer.license=feedbabe-1337-1337-1337-feeddeadbeef</testbench.license.prop> -->
 	</properties>
@@ -148,7 +148,7 @@
 					<scanIntervalSeconds>2</scanIntervalSeconds>
 					<jvmArgs>${additional-props} ${vmargs}</jvmArgs>
 					<useTestScope>${testScope}</useTestScope>
-					<jettyConfig>${jetty.env}</jettyConfig>
+					<!-- jettyConfig>${jetty.env}</jettyConfig -->
 					<stopKey>STOP</stopKey>
 					<stopPort>9999</stopPort>
 					<httpConnector>
@@ -296,16 +296,13 @@
 				</pluginRepository>
 			</pluginRepositories>
 		</profile>
-
 		<profile>
 			<id>ci-tests</id>
 			<properties>
 				<additional-props>-Ddatabase.backend=com.infraleap.demo.tests.database.TestDB</additional-props>
 				<testScope>true</testScope>
-				<jetty.env>src/test/resources/jetty/jetty-env-test.xml</jetty.env>
+				<!-- jetty.env>src/test/resources/jetty/jetty-env-test.xml</jetty.env -->
 			</properties>
 		</profile>
-
 	</profiles>
-
 </project>
