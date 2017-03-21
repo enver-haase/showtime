@@ -9,4 +9,8 @@ public abstract class DriverSetter {
 	protected static boolean isWindows(){
 		return System.getProperty("os.name").toLowerCase().contains("windows");
 	}
+	
+	protected static boolean isOSX(){
+		return System.getProperty("os.name").toLowerCase().contains("os x");
+	}
 }
