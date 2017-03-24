@@ -163,7 +163,6 @@
 							<goal>run-forked</goal>
 						</goals>
 						<configuration>
-							<scanIntervalSeconds>0</scanIntervalSeconds>
 							<waitForChild>false</waitForChild>
 						</configuration>
 					</execution>
