@@ -61,3 +61,10 @@ if you want the mock database environment for the testing, the line
  mvn -Pci-tests clean install
 is what you want to set the "ci-tests" profile as defined in the pom.xml
 file.
+
+Another trick: if your Jetty is running already, then
+ mvn -Pci-tests verify -Djetty.skip
+skips forking a Jetty instance and just starts the browser tests against
+any instance already running.
+This may help especially when you update the Jetty version and forking
+operating system (hello Windows users).
